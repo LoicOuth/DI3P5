@@ -1,0 +1,74 @@
+<app-splash-screen *ngIf="(splashLoading | async) else router"></app-splash-screen>
+
+<ng-template #router>
+   <mat-toolbar class="relative z-10 bg-white shadow-md">
+      <div class="flex items-center justify-between w-full px-5">
+         <div class="flex items-center justify-between w-1/4">
+            <a class="cursor-pointer" [href]="returnUrl">
+               <img src="../../assets/images/usite-logo-only-red.svg" class="h-10">
+            </a>
+            <div class="flex items-center">
+               <label class="mr-5 font-normal text-grayusite">Page in edition : </label>
+               <mat-form-field color="primary">
+                  <mat-select class="border-primary" (selectionChange)="onSelectedPageChange($event)"
+                     [value]="pagesState?.selectedPage?.id">
+                     <mat-option *ngFor=" let page of pagesState?.pages" [value]="page.id">{{page.name}}</mat-option>
+                  </mat-select>
+               </mat-form-field>
+            </div>
+         </div>
+         <div class="flex items-center">
+            <button mat-stroked-button color="primary" (click)="previewSite()">
+               Preview
+               <mat-icon>public</mat-icon>
+            </button>
+            <button mat-flat-button color="primary" class="!ml-5" (click)="putSiteOnline()">
+               Publish website
+               <mat-icon>publish</mat-icon>
+            </button>
+         </div>
+      </div>
+   </mat-toolbar>
+   <mat-icon fontIcon="chevron_right" class="absolute close-icon"></mat-icon>
+   <mat-drawer-container hasBackdrop="false">
+      <mat-drawer mode="side" opened disableClose class="bg-white shadow-md">
+         <div class="flex flex-col justify-center">
+            <nav-link icon="check_box_outline_blank" label="Add a block">
+               <manage-blocs></manage-blocs>
+            </nav-link>
+            <nav-link icon="reorder" label="Add content">
+               <add-content></add-content>
+            </nav-link>
+            <nav-link icon="settings_suggest" label="Page settings">
+               <app-page-detail></app-page-detail>
+            </nav-link>
+            <nav-link icon="near_me" label="Add menu">
+               <app-manage-menu></app-manage-menu>
+            </nav-link>
+            <nav-link icon="copy_all" label="From template" [popup]="ManageTemplateComponent"></nav-link>
+            <div class="flex flex-col items-center justify-center mt-10 cursor-pointer text-grayusite group"
+               (click)="createPage()">
+               <mat-icon aria-hidden="false" fontIcon="add"
+                  class="text-white rounded-md icon-size bg-primary group-hover:text-grayusite"></mat-icon>
+               <h4 class="my-5">Add a page</h4>
+               <mat-divider class="w-3/4"></mat-divider>
+            </div>
+         </div>
+      </mat-drawer>
+      <mat-drawer-content class="bg-white">
+         <mat-icon *ngIf="propertyOpened() | async" fontIcon="chevron_right"
+            class="absolute cursor-pointer close-icon hover:text-primary" matTooltip="close"
+            (click)="resetProperty()"></mat-icon>
+         <div class="flex justify-center w-full h-full">
+            <div class="w-11/12 h-full border-x scroll-container">
+               <router-outlet></router-outlet>
+            </div>
+         </div>
+      </mat-drawer-content>
+      <mat-drawer position="end" [opened]="propertyOpened() | async" mode="side" [disableClose]="true">
+         <properties-navbar></properties-navbar>
+      </mat-drawer>
+   </mat-drawer-container>
+</ng-template>
+
+<app-progress-bar *ngIf="deploymentState?.isPublishing" [isBig]="false"></app-progress-bar>

@@ -1,0 +1,17 @@
+<div class="flex flex-col items-start">
+   <h6>Select direction</h6>
+   <mat-button-toggle-group class="mt-3" (change)="onDirectionChange($event.value)" [value]="direction">
+      <mat-button-toggle value="flex-row">
+         <div class="flex items-center">
+            Row
+            <mat-icon class="ml-2 row" fontIcon="view_week"></mat-icon>
+         </div>
+      </mat-button-toggle>
+      <mat-button-toggle value="flex-col">
+         <div class="flex items-center">
+            Column
+            <mat-icon class="ml-2 column" fontIcon=" view_week"></mat-icon>
+         </div>
+      </mat-button-toggle>
+   </mat-button-toggle-group>
+</div>

@@ -1,0 +1,13 @@
+<div class="flex flex-col w-full p-5">
+
+   <button *ngIf="selectElement?.element?.parentId" mat-flat-button color="primary" class="w-full"
+      (click)="onSelectParent()">
+      Select parent
+      <mat-icon>escalator_warning</mat-icon>
+   </button>
+
+   <button mat-flat-button color="accent" class="w-full !mt-5" (click)="onDeleteElement()">
+      Delete element
+      <mat-icon>delete</mat-icon>
+   </button>
+</div>

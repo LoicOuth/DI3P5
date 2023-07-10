@@ -1,0 +1,101 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".yml" #>
+<#@ parameter name="SiteName" type="System.String" #>
+<#@ parameter name="IsDev" type="System.Boolean" #>  
+trigger: none
+variables:
+  currentEnvironment: <#= IsDev ? "dev" : "prod" #>
+
+stages:
+  - stage: build_project
+    pool:
+      vmImage: ubuntu-latest
+    jobs:
+      - job: build
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: 14.x
+            displayName: Install Node.js
+          - script: |
+              npm init -y
+              npm install tailwindcss
+              npx tailwindcss init
+            displayName: Initialize npm and Tailwind CSS
+          - script: |
+              sed -i "s|  content: \\[],|  content: [ \"*.html\" ],|g" tailwind.config.js
+            displayName: Update tailwind.config.js
+          - script: |
+              echo "@import 'tailwindcss/base';" > styles.css
+              echo "@import 'tailwindcss/components';" >> styles.css
+              echo "@import 'tailwindcss/utilities';" >> styles.css
+            displayName: Create styles.css
+          - script: |
+              npx tailwindcss build -i styles.css -o <#= SiteName #>/style.min.css --minify
+            displayName: Build and minify CSS
+          - script: |
+              mv *.html <#= SiteName #>/
+            displayName: Move HTML files to <#= SiteName #>/
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: $(System.DefaultWorkingDirectory)/<#= SiteName #>
+              artifact: <#= SiteName #>
+              publishLocation: pipeline
+            displayName: Publish artifact
+
+  - stage: deploy_project
+<# if(!IsDev) { #>
+    pool:
+      vmImage: ubuntu-latest
+<# } else { #>
+    pool: diiage-hosted
+<# } #>
+    jobs:
+      - job: deploy
+        steps:
+<# if(!IsDev) { #>
+        - task: CmdLine@2
+          displayName: Install dos2unix
+          inputs:
+            script: 'sudo apt install dos2unix'
+        - task: KubectlInstaller@0
+          displayName: Install kubectl latest
+        - task: DownloadSecureFile@1
+          inputs:
+            secureFile: 'config_prod.conf'
+        - task: CopyFiles@2
+          displayName: 'Import kubeconfig'
+          inputs:
+           SourceFolder: '$(Agent.TempDirectory)'
+           Contents: config_prod.conf
+           TargetFolder: .
+<# } #>
+        - task: DownloadPipelineArtifact@2
+          inputs:
+            artifact: <#= SiteName #>
+            path: $(System.DefaultWorkingDirectory)/<#= SiteName #>
+        - task: CmdLine@2
+          displayName: Changing  the configuration file's encoding
+          inputs:
+            script: |
+              dos2unix $(System.DefaultWorkingDirectory)/<#= SiteName #>.conf
+        - task: CmdLine@2
+          displayName: Sending the website files and nginx conf to the remote PVCs
+          inputs:
+            script: |
+              for pod in `kubectl<#= IsDev ? " " : " --kubeconfig=./config_prod.conf " #>get pods -n usite-$(currentEnvironment) -o=name | grep 'usite-websites' | sed "s/^.\{4\}//"`
+              do
+                kubectl<#= IsDev ? " " : " --kubeconfig=./config_prod.conf " #>cp $(System.DefaultWorkingDirectory)/<#= SiteName #>/ usite-$(currentEnvironment)/$pod:/var/www/clients/
+                dos2unix $(System.DefaultWorkingDirectory)/<#= SiteName #>.conf && kubectl<#= IsDev ? " " : " --kubeconfig=./config_prod.conf " #>cp $(System.DefaultWorkingDirectory)/<#= SiteName #>.conf usite-$(currentEnvironment)/$pod:/etc/nginx/conf.d/clients/
+                break
+              done
+        - task: CmdLine@2
+          displayName: Applying the client ingress
+          inputs:
+            script: |
+              kubectl<#= IsDev ? " " : " --kubeconfig=./config_prod.conf " #>apply -f $(System.DefaultWorkingDirectory)/ingress.yaml -n usite-$(currentEnvironment)
+        - task: CmdLine@2
+          displayName: Restarting the nginx pods through a deployment rollout
+          inputs:
+            script: |
+                kubectl<#= IsDev ? " " : " --kubeconfig=./config_prod.conf " #>-n usite-$(currentEnvironment) rollout restart deployment usite-websites-$(currentEnvironment)-usite-websites-service

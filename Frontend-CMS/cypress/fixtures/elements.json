@@ -1,0 +1,38 @@
+[
+   {
+      "id": "40c94985-4810-47da-a83d-36be6d2f02cc",
+      "type": 0,
+      "name": "Block 1",
+      "description": "desc du block 1",
+      "pageId": "973bf5eb-2ada-47e8-8afd-aac0ef9f131d",
+      "parentId": null,
+      "content": null,
+      "position": 0,
+      "menuId": null,
+      "url": null,
+      "alt": null,
+      "styles": [],
+      "elementsChilds": [
+         {
+            "id": "c8f0657b-df99-40c7-98d6-29964803408e",
+            "type": 2,
+            "name": null,
+            "description": null,
+            "pageId": null,
+            "parentId": "40c94985-4810-47da-a83d-36be6d2f02cc",
+            "content": "test E2E",
+            "position": 0,
+            "menuId": null,
+            "url": null,
+            "alt": null,
+            "elementsChilds": [],
+            "styles": [
+               {
+                  "property": 1,
+                  "value": "text-[50px]"
+               }
+            ]
+         }
+      ]
+   }
+]

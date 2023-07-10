@@ -1,0 +1,13 @@
+<div class="absolute top-0 left-0 flex flex-col items-center justify-center w-screen h-screen background-img ">
+   <div class="flex flex-col items-center">
+      <h1 class="text-2xl font-semibold text-center">
+         <ng-content></ng-content>
+      </h1>
+
+      <a [href]="returnUrl" mat-flat-button color="accent" class="!mt-5">
+         Return to home page
+         <mat-icon>home</mat-icon>
+      </a>
+   </div>
+
+</div>

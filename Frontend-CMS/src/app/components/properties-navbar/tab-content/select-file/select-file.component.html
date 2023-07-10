@@ -1,0 +1,17 @@
+<div class="flex flex-col mb-2">
+   <div style="text-align:center">
+      <img [src]="selectedElement?.element?.url" class="mx-auto mb-2 w-fullrounded-lg"
+         [alt]="selectedElement?.element?.alt">
+      <input class="hidden" type="file" #fileInput accept="image/*" (change)="selectFile($event)">
+      <button mat-raised-button color="primary" [disabled]="myFile" (click)="onClickFileInputButton()">
+         <div class="flex items-center">
+            <mat-icon>attach_file</mat-icon>
+            <p class="m-2" *ngIf="!myFile; else fileName">Change picture</p>
+            <ng-template #fileName>
+               <p class="m-2">{{ myFile?.name }}</p>
+               <mat-spinner md-mode="indeterminate" [diameter]="25" class="loader-white"></mat-spinner>
+            </ng-template>
+         </div>
+      </button>
+   </div>
+</div>

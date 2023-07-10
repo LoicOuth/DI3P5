@@ -1,0 +1,35 @@
+<div class="flex flex-col mt-5">
+   <div class="flex justify-between">
+      <h6>Font size</h6>
+      <mat-icon *ngIf="!showAdvanced else iconAdvanced" fontIcon="edit_note" matTooltip="Enter manually"
+         class="cursor-pointer hover:text-primary" (click)="showAdvanced = true"></mat-icon>
+      <ng-template #iconAdvanced>
+         <mat-icon fontIcon="title" matTooltip="Predefined size" class="cursor-pointer hover:text-primary"
+            (click)="showAdvanced = false"></mat-icon>
+      </ng-template>
+   </div>
+   <mat-button-toggle-group *ngIf="!showAdvanced else advanced" [vertical]="true"
+      (change)="onFontSizeChange($event.value)" [value]="fontSize" class="mt-3">
+      <mat-button-toggle value="60">
+         <div class="p-3.5 text-[60px] text-start">Big Title</div>
+      </mat-button-toggle>
+      <mat-button-toggle value="36">
+         <div class="p-3.5 text-[36px] text-start">Title</div>
+      </mat-button-toggle>
+      <mat-button-toggle value="24">
+         <div class="p-3.5 text-[24px] text-start">SubTitle</div>
+      </mat-button-toggle>
+      <mat-button-toggle value="16">
+         <div class="p-3.5 text-[16px] text-start">Paragraph</div>
+      </mat-button-toggle>
+   </mat-button-toggle-group>
+
+   <ng-template #advanced>
+      <div class="flex items-center">
+         <mat-slider thumbLabel min="0" max="100" step="1" class="w-full" [value]="fontSize"
+            (change)="onFontSizeChange($event.value!)">
+         </mat-slider>
+         <h6 class="w-px ml-1"> {{fontSize}}px</h6>
+      </div>
+   </ng-template>
+</div>

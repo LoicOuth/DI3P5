@@ -1,0 +1,13 @@
+{{- if .Values.PodDisruptionBudget.enabled }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "frontend-cms-service.fullname" . }}
+  labels:
+    {{- include "frontend-cms-service.labels" . | nindent 4 }}
+spec:
+  minAvailable: {{ .Values.PodDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      {{- include "frontend-cms-service.selectorLabels" . | nindent 6 }}
+{{- end }}

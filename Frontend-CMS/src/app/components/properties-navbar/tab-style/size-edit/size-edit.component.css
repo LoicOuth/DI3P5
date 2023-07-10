@@ -1,0 +1,7 @@
+mat-button-toggle-group {
+   flex-wrap: wrap;
+ }
+
+ mat-button-toggle-group mat-button-toggle {
+   flex: 1;
+ }

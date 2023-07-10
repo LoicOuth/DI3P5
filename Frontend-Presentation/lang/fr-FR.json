@@ -1,0 +1,200 @@
+{
+   "navbar": {
+      "home": "Accueil",
+      "template": "Créer votre site",
+      "pricing": "Tarifs",
+      "project": "Le projet",
+      "support": "Assistance",
+      "connexion": "Se connecter",
+      "information": "Informations",
+      "contact": "Contact",
+      "mention": "Mentions légale",
+      "cookie": "Gestion des cookies",
+      "plan": "Plan du site",
+      "copyright": "Copyright 2023 usite.fr | Tous droits réservés",
+      "description": "uSite est une plateforme web basée sur le cloud qui permet à chaque personne de créer son site web facilement"
+   },
+   "popupLanguage": {
+      "title": "Changer la langue"
+   },
+   "home": {
+      "header": {
+         "1": "Créer votre site web dès maintenant",
+         "2": "Donnez de la visibilité à votre entreprise !",
+         "3": "USITE vous accompagne de A à Z dans la création de votre site WEB",
+         "btn": "Je créé mon site!"
+      },
+      "body": {
+         "part1": {
+            "1": "Créer votre site web dès maintenant",
+            "2": "Facilitez-vous la vie en sélectionnant votre site parmis notre sélection de site prêts à l’emploi!",
+            "3": " Modifiez le texte, les images et les couleures comme bon vous semble"
+         },
+         "part2": {
+            "1": "Vous ne trouvez pas ce que vous cherchez ? Créez votre propre site!",
+            "2": "Si aucun site prêt à l’emploi ne vous convient, vous pouvez créer votre propre site sur-mesure!",
+            "3": "Ne gardez que le meilleur de chaque site que nous vous proposons."
+         },
+         "part3": {
+            "title": "Développez votre présence en ligne grâce à nos outils",
+            "card1": {
+               "title": "PERSONNALISATION",
+               "body": "Notre studio de modification est poussé au maximum pour que vous puissiez exprimer votre créativité avec une personnalisation poussé.",
+               "btn": "Créer mon site unique !"
+            },
+            "card2": {
+               "title": "AUCUNE PUBLICITE",
+               "body": " Nous pensons que vous méritez le meilleur, sans publicité. Votre visibilité sans distraction pour vos utilisateurs, et ce gratuitement!",
+               "btn": "En savoir plus !"
+            },
+            "1": "Et en plus, c’est 100% made in France",
+            "2": "Notre projet s’appuie sur un savoir-faire 100% français",
+            "3": "Nos sites sont hébergés sur le sol français."
+         },
+         "part4": {
+            "1": "Des sites performants, où que vous soyez",
+            "2": "Tous les aspects ont été étudiés pour vous offrir des performances hors du commun : le code, les services, l’infrastructure...",
+            "3": "Sur notre infrastructure, vos sites se chargent en un éclair, et ce même avec une connexion internet de 2002!"
+         },
+         "part5": {
+            "title": "Un pépin? On est là!",
+            "body": "Puisque votre image est notre priorité, nos experts sont à vootre écoute et résolvent vos problèmes aussi vite que possible.",
+            "btn": "Nous contacter"
+         }
+      }
+   },
+   "template": {
+      "header": {
+         "1": "Créer un site web n’a jamais été aussi simple !",
+         "2": "Nos outils sont optimisés pour la création de votre image.",
+         "3": "Commencez dès maintenant!",
+         "btn": "CLIQUEZ ICI POUR EN SAVOIR PLUS"
+      },
+      "part1": {
+         "title": "Pourquoi choisir notre outil?",
+         "1": "Nous l’avons créé pour vous simplifier la vie. Cet outil a été créé pour rendre accessible le WEB à tout le monde.",
+         "2": " Il est performant et fluide tout en étant élégant. Il saura vous ravit et saura améliorer votre présence sur le web.",
+         "list": {
+            "1": "Simplicité",
+            "2": "Performance",
+            "3": "Elegance"
+         }
+      },
+      "part2": {
+         "title": "Concevez tout vous-même",
+         "1": "Choisissez les composants que vous voulez et personalisez les : la couleurs, la taille, la Police, les bordure etc...",
+         "2": " Grâce à nos outils, ne gardez que ce que vous voulez garder.",
+         "list": {
+            "1": "Drag And Drop",
+            "2": "Des possibilités infinies"
+         }
+      },
+      "part3": {
+         "title": "Découvrez notre éditeur en image"
+      }
+   },
+   "pricing": {
+      "month": "mois",
+      "order": "Commander",
+      "studio": "Studio de personnalisation",
+      "https": "HTTPS Gratuit",
+      "support": "Assistance inclut",
+      "popular": "Populaire",
+      "domain": "Nom de domaine personnalisé",
+      "stat": "Statistique sur le site",
+      "statRef": "Statistique sur le référencement"
+   },
+   "support": {
+      "title": "Lancez-vous !",
+      "1": "Notre équipe dévouée se fera un plaisir de vous répondre",
+      "inputs": {
+         "name": "Votre nom",
+         "email": "Votre email (pour être recontacter)",
+         "message": "Votre message"
+      },
+      "rgpd1": "En cochant cette case, vous conscentez à ce que vos données personnelles soient traitées en accord avec",
+      "rgpd2": "nos conditions de traitement des données personnelles",
+      "btn": "Envoyer le message"
+   },
+   "account": {
+      "dashboard": {
+         "deployment": {
+            "title": "Liste des derniers déploiements",
+            "header1": "Informations sur le site",
+            "header2": "Résultat et Statut",
+            "header3": "Temps de fin et Écoulé",
+            "buildStatus": {
+               "0": "Aucun",
+               "1": "En cours",
+               "2": "Terminé",
+               "4": "Annulation",
+               "8": "Reporté",
+               "32": "Pas commencé"
+            },
+            "buildResult": {
+               "0": "Aucun",
+               "2": "Réussi",
+               "4": "Partiellement réussi",
+               "8": "Échoué",
+               "32": "Annulé"
+            }
+         }
+      },
+      "personalInfo": {
+         "part1": {
+            "title": "Modifier mes informations personellles",
+            "inputs": {
+               "username": "Identifiant",
+               "email": "Adresse email"
+            },
+            "btn": "Mettre à jour"
+         },
+         "part2": {
+            "title": "Autre fonctions",
+            "btn1": "Télécharger vos informations personnelles",
+            "btn2": "Supprimer votre compte google"
+         }
+      },
+      "security": {
+         "title": "Mettre à jour votre mot de passe",
+         "inputs": {
+            "old": "Ancien mot de passe",
+            "new": "Nouveau mot de passe",
+            "confirm": "Confirmer le nouveau mot de passe"
+         },
+         "btn": "Mettre à jour"
+      },
+      "site": {
+         "btns": {
+            "new": "Nouveau site",
+            "create": "Créer le site",
+            "delete": "Supprimer le site",
+            "edit": "Modifier le site"
+         },
+         "inputs": {
+            "name": "Nom du site",
+            "description": "Description du site"
+         },
+         "carroussel": {
+            "anyDomain": "Aucun nom de domaine",
+            "btns": {
+               "editInfo": "Modifier les informations du site",
+               "edit": "Modifier le site"
+            }
+         },
+         "deleteText": "Supprimer",
+         "anyText": "Aucun sites trouvés"
+      },
+      "popupLogout": {
+         "text": "Voulez vous vraiment vous deconnecter ?",
+         "btn": "Se déconnecter"
+      },
+      "navbar": {
+         "dashboard": "Tableau de bord",
+         "infos": "Mes Informations",
+         "security": "Sécurité",
+         "billing": "Mes factures",
+         "sites": "Mes sites"
+      }
+   }
+}

@@ -1,0 +1,16 @@
+<div *ngIf="!(progress | async)!.isPublishing else progressBar" class="flex flex-col items-center w-full">
+   <mat-form-field appearance="outline" floatLabel="always" class="w-full">
+      <mat-label>Comment for publish</mat-label>
+      <textarea matInput [(ngModel)]="comment"></textarea>
+   </mat-form-field>
+
+   <button mat-flat-button color="accent" (click)="publish()">
+      Publish
+      <mat-icon>publish</mat-icon>
+   </button>
+</div>
+<ng-template #progressBar>
+   <div class="relative z-10 w-full pt-1">
+      <app-progress-bar></app-progress-bar>
+   </div>
+</ng-template>

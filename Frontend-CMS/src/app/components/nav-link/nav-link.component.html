@@ -1,0 +1,13 @@
+<div #parent (clickOutside)="show = false">
+   <div class="flex flex-col items-center justify-center mt-10 cursor-pointer text-grayusite group"
+      (click)="popup ? showPopup() : (show = !show)">
+      <mat-icon aria-hidden="false" fontIcon="{{icon}}" class="icon-size group-hover:text-primary"
+         [ngClass]="show ? 'text-primary' : ''"></mat-icon>
+      <h4 class="my-5">{{label}}</h4>
+      <mat-divider class="w-3/4"></mat-divider>
+   </div>
+   <mat-card *ngIf="show && popup == undefined" class="!fixed card-position w-1/6"
+      [style.top.px]="parent.offsetTop + 30">
+      <ng-content></ng-content>
+   </mat-card>
+</div>

@@ -1,0 +1,16 @@
+﻿@page
+@using USite.Presentation.Areas.Identity.Pages.Account;
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = Ressources.RegisterConfirmation_Title;
+}
+
+<div class="flex flex-column w-full align-center">
+    <h1>@ViewData["Title"]</h1>
+    @if (!Model.IsEmailConfirmed)
+    {
+        <p>
+            @Ressources.RegisterConfirmation_Message
+        </p>
+    }
+</div>

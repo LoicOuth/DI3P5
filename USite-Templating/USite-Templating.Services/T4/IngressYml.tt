@@ -1,0 +1,33 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".yml" #>
+<#@ parameter name="SiteName" type="System.String" #>
+<#@ parameter name="DnsName" type="System.String" #>
+<#@ parameter name="IsDev" type="System.Boolean" #>  
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: usite-websites-<#=SiteName#>-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: <#= DnsName #>
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: usite-websites-<#=IsDev ? "dev" : "prod"#>-usite-websites-service
+                port:
+                  number: 80
+            path: /
+<# if(!IsDev) { #>
+
+  tls:
+  - hosts:
+    - usite.fr
+    - '*.usite.fr'
+    secretName: usite-wildcard-tls-certificate
+
+<# } #>
+
+

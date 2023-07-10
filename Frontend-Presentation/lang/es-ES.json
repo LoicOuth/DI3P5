@@ -1,0 +1,207 @@
+{
+   "navbar": {
+      "home": "Inicio",
+      "template": "Crea tu sitio web",
+      "pricing": "Precios",
+      "project": "El proyecto",
+      "support": "Soporte",
+      "connexion": "Iniciar sesión",
+      "information": "Información",
+      "contact": "Contacto",
+      "mention": "Aviso legal",
+      "cookie": "Gestión de cookies",
+      "plan": "Mapa del sitio",
+      "copyright": "Copyright 2023 usite.fr | Todos los derechos reservados",
+      "description": "uSite es una plataforma web basada en la nube que permite a cada persona crear su propio sitio web fácilmente"
+   },
+   "popupLanguage": {
+      "title": "Cambiar idioma"
+   },
+   "home": {
+      "header": {
+         "1": "Crea tu sitio web ahora",
+         "2": "¡Da visibilidad a tu negocio!",
+         "3": "USITE te acompaña de la A a la Z en la creación de tu sitio WEB",
+         "btn": "¡Creo mi sitio!"
+      },
+      "body": {
+         "part1": {
+            "1": "Crea tu sitio web ahora",
+            "2": "¡Hazte la vida fácil seleccionando tu sitio de nuestra selección de sitios listos para usar!",
+            "3": " Modifica el texto, las imágenes y los colores a tu gusto"
+         },
+         "part2": {
+            "1": "¿No encuentras lo que buscas? ¡Crea tu propio sitio!",
+            "2": "Si ningún sitio listo para usar te conviene, puedes crear tu propio sitio personalizado!",
+            "3": "Mantén solo lo mejor de cada sitio que te ofrecemos."
+         },
+         "part3": {
+            "title": "Desarrolla tu presencia en línea con nuestras herramientas",
+            "card1": {
+               "title": "PERSONALIZACIÓN",
+               "body": "Nuestro estudio de modificación está al máximo para que puedas expresar tu creatividad con una personalización avanzada.",
+               "btn": "¡Crear mi sitio único!"
+            },
+            "card2": {
+               "title": "SIN PUBLICIDAD",
+               "body": " Creemos que te mereces lo mejor, sin publicidad. Tu visibilidad sin distracciones para tus usuarios, ¡y gratis!",
+               "btn": "¡Más información!"
+            },
+            "1": "Y además, es 100% hecho en Francia",
+            "2": "Nuestro proyecto se basa en un know-how 100% francés",
+            "3": "Nuestros sitios están alojados en territorio francés."
+         },
+         "part4": {
+            "1": "Sitios eficientes, dondequiera que estés",
+            "2": "Todos los aspectos han sido estudiados para ofrecerte un rendimiento excepcional: el código, los servicios, la infraestructura...",
+            "3": "En nuestra infraestructura, tus sitios se cargan en un abrir y cerrar de ojos, ¡incluso con una conexión a internet de 2002!"
+         },
+         "part5": {
+            "title": "¿Un problema? ¡Estamos aquí!",
+            "body": "Como tu imagen es nuestra prioridad, nuestros expertos están a tu disposición y resuelven tus problemas lo más rápido posible.",
+            "btn": "Contactarnos"
+         }
+      }
+   },
+   "template": {
+      "header": {
+         "1": "¡Crear un sitio web nunca ha sido tan fácil!",
+         "2": "Nuestras herramientas están optimizadas para la creación de tu imagen.",
+         "3": "¡Comienza ahora!",
+         "btn": "HAGA CLIC AQUÍ PARA SABER MÁS"
+      },
+      "part1": {
+         "title": "¿Por qué elegir nuestra herramienta?",
+         "1": "La hemos creado para facilitarte la vida. Esta herramienta ha sido creada para hacer accesible la WEB a todos.",
+         "2": " Es eficiente y fluido a la vez que elegante. Te encantará y mejorará tu presencia en la web.",
+         "list": {
+            "1": "Simplicidad",
+            "2": "Rendimiento",
+            "3": "Elegancia"
+         }
+      },
+      "part2": {
+         "title": "Diseña todo tú mismo",
+         "1": "Elige los componentes que quieras y personalízalos: los colores, el tamaño, la fuente, los bordes, etc...",
+         "2": " Con nuestras herramientas, solo mantén lo que quieras mantener.",
+         "list": {
+            "1": "Arrastrar y soltar",
+            "2": "Posibilidades infinitas"
+         }
+      },
+      "part3": {
+         "title": "Descubre nuestro editor en imágenes"
+      }
+   },
+   "pricing": {
+      "month": "mes",
+      "order": "Ordenar",
+      "studio": "Estudio de personalización",
+      "https": "HTTPS Gratis",
+      "support": "Soporte incluido",
+      "popular": "Popular",
+      "domain": "Nombre de dominio personalizado",
+      "stat": "Estadísticas del sitio",
+      "statRef": "Estadísticas de referencia"
+   },
+   "support": {
+      "title": "¡Empieza!",
+      "1": "Nuestro equipo dedicado estará encantado de responderte",
+      "inputs": {
+         "name": "Tu nombre",
+         "email": "Tu correo electrónico (para ser contactado)",
+         "message": "Tu mensaje"
+      },
+      "rgpd1": "Al marcar esta casilla, das tu consentimiento para que tus datos personales sean tratados de acuerdo con",
+      "rgpd2": "nuestras condiciones de tratamiento de datos personales",
+      "btn": "Enviar el mensaje"
+   },
+   "account": {
+      "dashboard": {
+         "deployment": {
+            "title": "Lista de los últimos despliegues",
+            "header1": "Información sobre el sitio",
+            "header2": "Resultado y estado",
+            "header3": "Hora de finalización y transcurrido",
+            "buildStatus": {
+               "0": "Ninguno",
+               "1": "En curso",
+               "2": "Terminado",
+               "4": "Cancelación",
+               "8": "Pospuesto",
+               "32": "No empezado"
+            },
+            "buildResult": {
+               "0": "Ninguno",
+               "2": "Éxito",
+               "4": "Parcialmente exitoso",
+               "8": "Fallido",
+               "32": "Cancelado"
+            }
+         }
+      },
+      "personalInfo": {
+         "part1": {
+            "title": "Modificar mi información personal",
+            "inputs": {
+               "username": "Usuario",
+               "email": "Correo electrónico",
+               "btn": "Modificar"
+            }
+         },
+         "part2": {
+            "title": "Modificar mi contraseña",
+            "inputs": {
+               "password": "Contraseña actual",
+               "newpassword": "Nueva contraseña",
+               "confirmpassword": "Confirme la nueva contraseña",
+               "btn": "Modificar"
+            }
+         },
+         "part3": {
+            "title": "Eliminar mi cuenta",
+            "btn": "Eliminar"
+         }
+      },
+      "myWebsites": {
+         "header": "Mis sitios web",
+         "0": "No tienes ningún sitio web",
+         "create": "Crear un sitio"
+      },
+      "studio": {
+         "header": "Estudio de personalización",
+         "inputs": {
+            "chooseWebsite": "Elige tu sitio web",
+            "name": "Nombre de tu sitio",
+            "template": "Elige tu plantilla",
+            "btn": "Crear"
+         }
+      }
+   },
+   "infos": {
+      "mentions": {
+         "title": "Aviso legal",
+         "1": "Información sobre la publicación",
+         "2": "Director de publicación",
+         "3": "Diseño y producción",
+         "4": "Hospedaje"
+      },
+      "cookies": {
+         "title": "Gestión de cookies",
+         "1": "¿Qué es una cookie?",
+         "2": "Para qué usamos las cookies?",
+         "3": "¿Cómo gestionar las cookies?"
+      },
+      "sitemap": {
+         "title": "Mapa del sitio"
+      },
+      "privacy": {
+         "title": "Política de privacidad",
+         "1": "Recopilación de información personal",
+         "2": "Uso y comunicación de su información personal",
+         "3": "Derecho de acceso, rectificación y supresión de sus datos",
+         "4": "Seguridad",
+         "5": "Contacto"
+      }
+   }
+}

@@ -1,0 +1,48 @@
+.h-container {
+   height: calc(100% - 52px);
+}
+
+
+.card {
+   position: relative;
+   border-radius: 0.375rem;
+   overflow: hidden;
+}
+
+.card:hover .overlay {
+   height: 100%;
+   padding: 0.5rem;
+}
+
+.overlay {
+   padding: 0;
+   position: absolute;
+   z-index: 10000;
+   bottom: 0;
+   height: 0%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.9);
+   transition: height 300ms;
+   border-radius: 0.375rem;
+}
+
+.overlay > * {
+   opacity: 0;
+   transition-delay: 180ms;
+   transition-property: opacity;
+   pointer-events: none;
+}
+
+.card:hover .overlay > * {
+   opacity: 1;
+   pointer-events: all;
+}
+
+.btn-template:disabled {
+   background-color: #E71D36 !important;
+   opacity: 0.8;
+}
+
+.mat-button-wrapper {
+   display: flex !important;
+}

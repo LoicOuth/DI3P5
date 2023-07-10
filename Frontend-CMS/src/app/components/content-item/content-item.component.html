@@ -1,0 +1,31 @@
+<div class="flex items-center" [ngSwitch]="enum" [ngClass]="isRow ? 'flex-row h-full justify-center' : 'flex-col'">
+   <ng-container *ngSwitchCase="'H1'">
+      <mat-icon fontIcon="title" class="icon-size-xs"></mat-icon>
+
+      <h1 class="text-lg" [ngClass]="isRow ? 'ml-3' : 'mt-3'">Text</h1>
+   </ng-container>
+
+   <ng-container *ngSwitchCase="'Button'">
+      <mat-icon fontIcon="ads_click" class="icon-size-xs"></mat-icon>
+
+      <h1 class="text-lg" [ngClass]="isRow ? 'ml-3' : 'mt-3'">Button</h1>
+   </ng-container>
+
+   <ng-container *ngSwitchCase="'Block'">
+      <mat-icon fontIcon="grid_view" class="icon-size-xs"></mat-icon>
+
+      <h1 class="text-lg" [ngClass]="isRow ? 'ml-3' : 'mt-3'">Block</h1>
+   </ng-container>
+
+   <ng-container *ngSwitchCase="'Image'">
+      <mat-icon fontIcon="image" class="icon-size-xs"></mat-icon>
+
+      <h1 class="text-lg" [ngClass]="isRow ? 'ml-3' : 'mt-3'">Image</h1>
+   </ng-container>
+
+   <ng-container *ngSwitchCase="'Menu'">
+      <mat-icon fontIcon="near_me" class="icon-size-xs"></mat-icon>
+
+      <h1 class="text-lg" [ngClass]="isRow ? 'ml-3' : 'mt-3'">Menu</h1>
+   </ng-container>
+</div>

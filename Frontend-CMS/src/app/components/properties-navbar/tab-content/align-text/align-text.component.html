@@ -1,0 +1,17 @@
+<div class="flex flex-col items-start">
+   <h6>Text alignment</h6>
+   <mat-button-toggle-group (change)="onTextAlignChange($event)" [value]="textAlign" class="mt-2">
+      <mat-button-toggle value="text-left" matTooltip="Align left">
+         <mat-icon>format_align_left</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="text-center" matTooltip="Align center">
+         <mat-icon>format_align_center</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="text-right" matTooltip="Align right">
+         <mat-icon>format_align_right</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="text-justify" matTooltip="Align justify">
+         <mat-icon>format_align_justify</mat-icon>
+      </mat-button-toggle>
+   </mat-button-toggle-group>
+</div>

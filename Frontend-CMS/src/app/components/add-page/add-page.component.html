@@ -1,0 +1,19 @@
+<h1 mat-dialog-title class="text-xl font-bold">Add a page</h1>
+<div mat-dialog-content class="flex flex-col my-5" [formGroup]="pageFormGroup">
+    <mat-form-field class="w-full" appearance="fill">
+        <mat-label>Enter a name for your page</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="pageFormGroup.get('name')?.hasError('required')">
+            Name field is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mt-5" appearance="fill">
+        <mat-label>Enter a description for your page</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="flex justify-end">
+    <button mat-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-flat-button color="primary" (click)="submitForm()" [disabled]="!pageFormGroup.valid">Create</button>
+</div>

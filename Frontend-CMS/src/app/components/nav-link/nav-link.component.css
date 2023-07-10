@@ -1,0 +1,5 @@
+.card-position {
+   left: 210px;
+   overflow: auto;
+   max-height: 30rem;
+}

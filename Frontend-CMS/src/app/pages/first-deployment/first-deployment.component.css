@@ -1,0 +1,48 @@
+.bg {
+   background: rgb(64,61,88);
+   background: linear-gradient(90deg, rgba(64,61,88,1) 0%, rgba(64,61,88,1) 30%, rgba(231,29,54,1) 100%);
+}
+
+.circle {
+   position: absolute;
+   left: 0px;
+   top: 0;
+   width: 100px;
+   height: 100px;
+   border-radius: 99999px;
+   background-color: white;
+   animation: bounce 2s forwards cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@keyframes bounce {
+   0% {
+       left: 0;
+       top: 0;
+       height: 100px;
+       width: 100px;
+   }
+   25% {
+       left: 10vw;
+       top: 50vh;
+       height: 90px;
+       width: 90px;
+   }
+   50% {
+       left: 20vw;
+       top: 20vh;
+       height: 80px;
+       width: 80px;
+   }
+   75% {
+       left: 30vw;
+       top: 70vh;
+       height: 90px;
+       width: 90px;
+   }
+   100% {
+       left: calc(50vw - 95vh/2);
+       top: calc(50vh - 95vh/2);
+       height: 95vh;
+       width: 95vh;
+   }
+}

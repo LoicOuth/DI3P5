@@ -1,0 +1,50 @@
+mat-drawer-container {
+   height: calc(100vh - 64px);
+   overflow: auto;
+}
+
+mat-drawer {
+   width: 200px;
+}
+
+mat-drawer[position="end"]{
+   width: 500px;
+}
+
+.close-icon {
+   right: 1%;
+   top: 50%;
+   transform: scale(1.5);
+}
+
+/* Conteneur de la barre de défilement */
+.scroll-container {
+   overflow-y: auto;
+   padding-right: 1px;
+   padding-left: 1px;
+ }
+ 
+ /* Barre de défilement pour WebKit (Chrome, Safari, Opera) */
+ .scroll-container::-webkit-scrollbar {
+   width: 5px; /* Largeur de la barre de défilement */
+ }
+ 
+ .scroll-container::-webkit-scrollbar-track {
+   background: transparent; /* Couleur de fond de la piste */
+ }
+ 
+ .scroll-container::-webkit-scrollbar-thumb {
+   background-color: rgba(0, 0, 0, 0.2); /* Couleur de la barre de défilement */
+   border-radius: 3px; /* Rayon de la bordure pour arrondir les bords */
+ }
+ 
+ /* Barre de défilement pour Firefox */
+ .scroll-container {
+   scrollbar-width: thin; /* Largeur de la barre de défilement */
+   scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Couleur de la barre de défilement et piste */
+ }
+ 
+ /* Barre de défilement pour Internet Explorer */
+ .scroll-container {
+   -ms-overflow-style: -ms-autohiding-scrollbar; /* Cache automatiquement la barre de défilement lorsqu'elle n'est pas utilisée */
+ }

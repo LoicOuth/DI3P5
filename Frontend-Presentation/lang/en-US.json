@@ -1,0 +1,200 @@
+{
+   "navbar": {
+      "home": "Home",
+      "template": "Create your website",
+      "pricing": "Pricing",
+      "project": "The project",
+      "support": "Support",
+      "connexion": "Log in",
+      "information": "Information",
+      "contact": "Contact",
+      "mention": "Legal notice",
+      "cookie": "Cookie management",
+      "plan": "Site map",
+      "copyright": "Copyright 2023 usite.fr | All rights reserved",
+      "description": "uSite is a cloud-based web platform that allows everyone to easily create their own website"
+   },
+   "popupLanguage": {
+      "title": "Change language"
+   },
+   "home": {
+      "header": {
+         "1": "Create your website now",
+         "2": "Give visibility to your business!",
+         "3": "USITE supports you from A to Z in the creation of your WEB site",
+         "btn": "I create my site!"
+      },
+      "body": {
+         "part1": {
+            "1": "Create your website now",
+            "2": "Make your life easier by selecting your site from our selection of ready-to-use sites!",
+            "3": "Modify the text, images and colors as you see fit"
+         },
+         "part2": {
+            "1": "Can't find what you're looking for? Create your own site!",
+            "2": "If no ready-to-use site suits you, you can create your own custom site!",
+            "3": "Keep only the best of each site that we offer you."
+         },
+         "part3": {
+            "title": "Develop your online presence with our tools",
+            "card1": {
+               "title": "PERSONALIZATION",
+               "body": "Our modification studio is maximized so that you can express your creativity with advanced customization.",
+               "btn": "Create my unique site!"
+            },
+            "card2": {
+               "title": "NO ADVERTISING",
+               "body": "We believe you deserve the best, without advertising. Your visibility without distraction for your users, and it's free!",
+               "btn": "Learn more!"
+            },
+            "1": "And what's more, it's 100% made in France",
+            "2": "Our project is based on 100% French know-how",
+            "3": "Our sites are hosted on French soil."
+         },
+         "part4": {
+            "1": "High-performance sites, wherever you are",
+            "2": "All aspects have been studied to offer you extraordinary performance: the code, the services, the infrastructure...",
+            "3": "On our infrastructure, your sites load in a flash, even with a 2002 internet connection!"
+         },
+         "part5": {
+            "title": "A problem? We're here!",
+            "body": "Since your image is our priority, our experts are listening to you and solve your problems as quickly as possible.",
+            "btn": "Contact us"
+         }
+      }
+   },
+   "template": {
+      "header": {
+         "1": "Creating a website has never been easier!",
+         "2": "Our tools are optimized for creating your image.",
+         "3": "Start now!",
+         "btn": "CLICK HERE TO LEARN MORE"
+      },
+      "part1": {
+         "title": "Why choose our tool?",
+         "1": "We created it to make your life easier. This tool was created to make the WEB accessible to everyone.",
+         "2": "It's efficient and fluid while being elegant. It will delight you and improve your presence on the web.",
+         "list": {
+            "1": "Simplicity",
+            "2": "Performance",
+            "3": "Elegance"
+         }
+      },
+      "part2": {
+         "title": "Design everything yourself",
+         "1": "Choose the components you want and customize them: colors, size, font, border etc...",
+         "2": "With our tools, keep only what you want to keep.",
+         "list": {
+            "1": "Drag And Drop",
+            "2": "Infinite possibilities"
+         }
+      },
+      "part3": {
+         "title": "Discover our editor in pictures"
+      }
+   },
+   "pricing": {
+      "month": "month",
+      "order": "Order",
+      "studio": "Customization studio",
+      "https": "Free HTTPS",
+      "support": "Included support",
+      "popular": "Popular",
+      "domain": "Custom domain name",
+      "stat": "Site statistics",
+      "statRef": "SEO statistics"
+   },
+   "support": {
+      "title": "Get started!",
+      "1": "Our dedicated team will be happy to answer you",
+      "inputs": {
+         "name": "Your name",
+         "email": "Your email (to be recontacted)",
+         "message": "Your message"
+      },
+      "rgpd1": "By checking this box, you consent to your personal data being processed in accordance with",
+      "rgpd2": "our personal data processing conditions",
+      "btn": "Send the message"
+   },
+   "account": {
+      "dashboard": {
+         "deployment": {
+            "title": "List of recent deployments",
+            "header1": "Site information",
+            "header2": "Result and Status",
+            "header3": "End time and Elapsed",
+            "buildStatus": {
+               "0": "None",
+               "1": "In progress",
+               "2": "Completed",
+               "4": "Cancellation",
+               "8": "Deferred",
+               "32": "Not started"
+            },
+            "buildResult": {
+               "0": "None",
+               "2": "Successful",
+               "4": "Partially successful",
+               "8": "Failed",
+               "32": "Cancelled"
+            }
+         }
+      },
+      "personalInfo": {
+         "part1": {
+            "title": "Edit my personal information",
+            "inputs": {
+               "username": "Username",
+               "email": "Email address"
+            },
+            "btn": "Update"
+         },
+         "part2": {
+            "title": "Other functions",
+            "btn1": "Download your personal information",
+            "btn2": "Delete your google account"
+         }
+      },
+      "security": {
+         "title": "Update your password",
+         "inputs": {
+            "old": "Old password",
+            "new": "New password",
+            "confirm": "Confirm new password"
+         },
+         "btn": "Update"
+      },
+      "site": {
+         "btns": {
+            "new": "New site",
+            "create": "Create site",
+            "delete": "Delete site",
+            "edit": "Edit site"
+         },
+         "inputs": {
+            "name": "Site name",
+            "description": "Site description"
+         },
+         "carroussel": {
+            "anyDomain": "No domain name",
+            "btns": {
+               "editInfo": "Edit site information",
+               "edit": "Edit site"
+            }
+         },
+         "deleteText": "Delete",
+         "anyText": "No sites found"
+      },
+      "popupLogout": {
+         "text": "Do you really want to logout?",
+         "btn": "Logout"
+      },
+      "navbar": {
+         "dashboard": "Dashboard",
+         "infos": "My Information",
+         "security": "Security",
+         "billing": "My bills",
+         "sites": "My sites"
+      }
+   }
+}

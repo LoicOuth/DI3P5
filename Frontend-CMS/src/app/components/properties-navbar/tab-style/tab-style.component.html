@@ -1,0 +1,29 @@
+<div class="flex flex-col p-5" [ngSwitch]="(selectedElement | async)?.element?.type">
+   <div *ngSwitchCase="TypeElement.H1">
+      <app-text-decoration></app-text-decoration>
+      <app-choose-color class="mt-5"></app-choose-color>
+   </div>
+
+   <div *ngSwitchCase="TypeElement.Button">
+      <app-text-decoration></app-text-decoration>
+      <app-choose-color></app-choose-color>
+   </div>
+
+   <div *ngSwitchCase="TypeElement.Menu">
+      <app-text-decoration></app-text-decoration>
+      <app-choose-color class="mt-5"></app-choose-color>
+   </div>
+
+   <app-choose-color label="Background color" [property]="StyleProperty.BackgroundColor"
+      class="mt-5"></app-choose-color>
+
+   <app-size-edit class="mt-5"></app-size-edit>
+   <app-spacing-edit></app-spacing-edit>
+   <app-spacing-edit label="Set Margin" [property]="StyleProperty.Margin"></app-spacing-edit>
+
+   <app-spacing-edit label="Border" [property]="StyleProperty.Border"></app-spacing-edit>
+   <app-choose-color label="Border color" [property]="StyleProperty.BorderColor" class="mt-5"></app-choose-color>
+   
+   
+   <app-box-shadow class="mt-5"></app-box-shadow>
+</div>

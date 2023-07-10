@@ -1,0 +1,27 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = Ressources.ResendMailConfirmation_Title;
+}
+
+<div class="flex flex-column align-center w-full">
+    <h1>@ViewData["Title"]</h1>
+    <h2>@Ressources.ResendMailConfirmation_Title2</h2>
+
+    <form method="post" class="w-1_6">
+        <div class="form mb-3">
+            <input asp-for="Input.Email" aria-required="true" placeholder=" " />
+            <label asp-for="Input.Email"></label>
+            <span asp-validation-for="Input.Email"></span>
+        </div>
+        <button type="submit" class="w-full btn-primary mb-3">@Ressources.ResendMailConfirmation_Resend</button>
+        @if (Model.ShowDoneMessage)
+        {
+            <div class="text-info text-center">@Ressources.ResendMailConfirmation_Message</div>
+        }
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

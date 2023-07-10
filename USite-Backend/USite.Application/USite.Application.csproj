@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Commands\Dto\**" />
+    <EmbeddedResource Remove="Pages\Commands\Dto\**" />
+    <None Remove="Pages\Commands\Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Common\Behaviours\AuthorizationBehaviour.cs~RFad74721.TMP" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.1" />
+		<PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="16.205.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\USite.Domain\USite.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

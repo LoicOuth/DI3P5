@@ -1,0 +1,15 @@
+﻿﻿<#@ template language="C#" #>
+<#@ output extension=".conf" #>
+<#@ parameter name="SiteName" type="System.String" #>
+<#@ parameter name="DnsName" type="System.String" #>
+server {
+    listen 80;
+    server_name <#= DnsName #>;
+
+    # Spécifique aux Single Page Applications
+    location / {
+        root /var/www/clients/<#= SiteName #>;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+}

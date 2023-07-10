@@ -1,0 +1,14 @@
+[
+   {
+      "id": "973bf5eb-2ada-47e8-8afd-aac0ef9f131d",
+      "name": "Home",
+      "description": "Page d'accueil de mon site",
+      "isFirst": true
+   },
+   {
+      "id": "adb95776-8984-4604-a7a3-2216d0811832",
+      "name": "Contact",
+      "description": "Page de contact de mon site",
+      "isFirst": false
+   }
+]

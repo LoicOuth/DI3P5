@@ -1,0 +1,42 @@
+<div class="flex flex-col p-5" [ngSwitch]="(selectedElement | async)?.element?.type">
+
+   <div *ngSwitchCase="TypeElement.H1">
+      <h6>Text content</h6>
+      <mat-form-field class="w-full mt-2" appearance="outline">
+         <textarea matInput [value]="(selectedElement | async)?.element?.content" (input)="onContentChange($event)"
+            rows="5"></textarea>
+      </mat-form-field>
+
+      <app-align-text></app-align-text>
+      <app-font-size></app-font-size>
+   </div>
+   <div *ngSwitchCase="TypeElement.Button">
+      <h6>Button content</h6>
+      <mat-form-field class="w-full mt-2" appearance="outline">
+         <textarea matInput [value]="(selectedElement | async)?.element?.content" (input)="onContentChange($event)"
+            rows="5"></textarea>
+      </mat-form-field>
+
+      <app-font-size></app-font-size>
+   </div>
+
+   <div *ngSwitchCase="TypeElement.Block">
+      <app-flex-edit></app-flex-edit>
+      <app-content-direction></app-content-direction>
+   </div>
+
+   <div *ngSwitchCase="TypeElement.Menu">
+      <h6>Text content</h6>
+      <mat-form-field class="w-full mt-2" appearance="outline">
+         <textarea matInput [value]="(selectedElement | async)?.element?.content" (input)="onContentChange($event)"
+            rows="5"></textarea>
+      </mat-form-field>
+
+      <app-align-text></app-align-text>
+      <app-font-size></app-font-size>
+   </div>
+
+   <div *ngSwitchCase="TypeElement.Image">
+      <app-select-file></app-select-file>
+   </div>
+</div>

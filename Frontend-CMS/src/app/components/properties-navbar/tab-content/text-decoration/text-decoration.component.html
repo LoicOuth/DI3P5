@@ -1,0 +1,7 @@
+<h6>Text decoration</h6>
+<mat-button-toggle-group name="fontStyle" class="mt-2" multiple (change)="onTextDecorationChange($event)"
+   [value]="textDecoration">
+   <mat-button-toggle value="font-bold">Bold</mat-button-toggle>
+   <mat-button-toggle value="italic">Italic</mat-button-toggle>
+   <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>

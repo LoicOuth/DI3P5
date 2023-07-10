@@ -1,0 +1,61 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = Ressources.Text_Register;
+}
+<div class="flex flex-column align-center">
+    <h1 class="mb-0 title-color">
+        @ViewData["Title"]
+    </h1>
+    <a asp-area="Identity" asp-page="/Account/Login">@Ressources.Text_Link_Login</a>
+</div>
+<div class="flex justify-center align-center w-full">
+    <div class="w-1_3 sm-w-2_3">
+        <form id="registerForm" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="flex justify-between">
+                <div class="form mt-5">
+                    <input asp-for="Input.FirstName" autocomplete="firstname" aria-required="true" placeholder=" "
+                        class="block">
+                    <label asp-for="Input.FirstName" class="title-color">@Ressources.Text_FirstName</label>
+                    <span asp-validation-for="Input.FirstName"></span>
+                </div>
+                <div class="form mt-5">
+                    <input asp-for="Input.LastName" autocomplete="lastname" aria-required="true" placeholder=" "
+                        class="block" />
+                    <label asp-for="Input.LastName" class="title-color">@Ressources.Text_LastName</label>
+                    <span asp-validation-for="Input.LastName"></span>
+                </div>
+            </div>
+            <div class="form mt-5">
+                <input asp-for="Input.Email" autocomplete="email" aria-required="true" placeholder=" "
+                    class="block" />
+                <label asp-for="Input.Email" class="title-color">@Ressources.Text_Mail</label>
+                <span asp-validation-for="Input.Email"></span>
+            </div>
+            <div class="form mt-5">
+                <input asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder=" "
+                    class="block" />
+                <label asp-for="Input.Password" class="title-color">@Ressources.Text_Password</label>
+                <span asp-validation-for="Input.Password"></span>
+            </div>
+            <div class="form mt-5">
+                <input asp-for="Input.ConfirmPassword" autocomplete="confirm-password" aria-required="true" placeholder=" "
+                    class="block" />
+                <label asp-for="Input.ConfirmPassword" class="title-color">@Ressources.Text_ConfirmPassword</label>
+                <span asp-validation-for="Input.ConfirmPassword"></span>
+            </div>
+            <div class="mt-5">
+                <input type="checkbox" asp-for="Input.ConfirmRGPD" aria-required="true">
+                <label asp-for="Input.ConfirmRGPD" class="text-xl">@Ressources.Text_CheckboxConditionUtilisation1 <a asp-area="Identity" asp-page="/Account/RGPD">
+                    @Ressources.Text_CheckboxConditionUtilisation2</a></label>
+                <span asp-validation-for="Input.ConfirmRGPD" class="text-danger block"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-full btn-primary mt-5">@Ressources.Text_Register</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

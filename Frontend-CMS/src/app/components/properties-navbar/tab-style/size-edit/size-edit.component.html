@@ -1,0 +1,35 @@
+<div class="flex flex-col mt-2">
+   <div class="flex items-center justify-between">
+      <h6>{{label}}</h6>
+      <mat-icon *ngIf="!showAdvanced else iconAdvanced" fontIcon="edit_note" matTooltip="Enter manually"
+         class="cursor-pointer hover:text-primary" (click)="showAdvanced = true"></mat-icon>
+      <ng-template #iconAdvanced>
+         <mat-icon fontIcon="straighten" matTooltip="Predefined size" class="cursor-pointer hover:text-primary"
+            (click)="showAdvanced = false"></mat-icon>
+      </ng-template>
+   </div>
+
+   <mat-button-toggle-group *ngIf="!showAdvanced else advanced" (change)="onSizeChange($event.value)" [value]="size"
+      class="justify-center mt-3">
+      <mat-button-toggle value="10">10</mat-button-toggle>
+      <mat-button-toggle value="20">20</mat-button-toggle>
+      <mat-button-toggle value="30">30</mat-button-toggle>
+      <mat-button-toggle value="40">40</mat-button-toggle>
+      <mat-button-toggle value="50">50</mat-button-toggle>
+      <mat-button-toggle value="60">60</mat-button-toggle>
+      <mat-button-toggle value="70">70</mat-button-toggle>
+      <mat-button-toggle value="80">80</mat-button-toggle>
+      <mat-button-toggle value="90">90</mat-button-toggle>
+      <mat-button-toggle value="100">100</mat-button-toggle>
+      <mat-button-toggle value="auto" class="w-full border-t">auto</mat-button-toggle>
+   </mat-button-toggle-group>
+
+   <ng-template #advanced>
+      <div class="flex items-center">
+         <mat-slider thumbLabel min="0" max="100" step="1" class="w-full" [value]="size"
+            (change)="onSizeChange($event.value!)">
+         </mat-slider>
+         <h6 class="w-px ml-1">{{size === 'auto' ? 'Auto' : size + unit}}</h6>
+      </div>
+   </ng-template>
+</div>

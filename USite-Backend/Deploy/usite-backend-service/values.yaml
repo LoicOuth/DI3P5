@@ -1,0 +1,31 @@
+replicaCount: 1
+
+image:
+  repository: louthier/usite-backend-service
+  pullPolicy: Always
+  tag: "latest"
+
+imagePullSecrets:
+  - name: regcred
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  className: nginx
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+  hosts:
+    - host: api.usite.fr
+      paths: 
+      - path: "/"
+        pathType: Prefix
+
+
+autoscaling:
+  enabled: false
+
+serviceAccount:
+  create: false

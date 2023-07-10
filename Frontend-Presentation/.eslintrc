@@ -1,0 +1,11 @@
+{
+	"extends": "@nuxtjs/eslint-config-typescript",
+	"rules": {
+		"vue/no-v-html": "off",
+		"vue/no-multiple-template-root": "off",
+		"require-await": "off",
+		"vue/html-indent": ["error", 4], //indentation de 4 space en html
+		"indent": ["error", 4], // indentation de 4 space dans le ts
+		"quotes": ["error", "double"] // double quote au lieu de single
+	}
+}

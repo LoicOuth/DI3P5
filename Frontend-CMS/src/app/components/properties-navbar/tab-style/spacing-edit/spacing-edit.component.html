@@ -1,0 +1,43 @@
+<div class="flex flex-col mt-5">
+   <div class="flex items-center justify-between">
+      <h6>{{label}}</h6>
+      <mat-icon *ngIf="!showAdvanced else iconAdvanced" fontIcon="edit_note" matTooltip="Enter manually"
+         class="cursor-pointer hover:text-primary" (click)="showAdvanced = true"></mat-icon>
+      <ng-template #iconAdvanced>
+         <mat-icon fontIcon="straighten" matTooltip="Predefined size" class="cursor-pointer hover:text-primary"
+            (click)="showAdvanced = false"></mat-icon>
+      </ng-template>
+   </div>
+
+   <div *ngIf="!showAdvanced else advanced" class="flex items-center mt-2">
+      <mat-slider thumbLabel min="0" max="200" step="1" class="w-full" [value]="spacing.global"
+         (valueChange)="onSizeChange($event)">
+      </mat-slider>
+      <h6 class="w-px ml-1">{{spacing.global}} px</h6>
+   </div>
+
+   <ng-template #advanced>
+      <div class="flex items-center mt-2">
+         <mat-form-field appearance="fill" class="advanced">
+            <mat-label>Top</mat-label>
+            <input type="number" min="0" max="1000" matInput [(ngModel)]="spacing.top" (input)="onInputSize()">
+            <h6 matSuffix>px</h6>
+         </mat-form-field>
+         <mat-form-field appearance="fill" class="advanced">
+            <mat-label>Bottom</mat-label>
+            <input type="number" min="0" max="1000" matInput [(ngModel)]="spacing.bottom" (input)="onInputSize()">
+            <h6 matSuffix>px</h6>
+         </mat-form-field>
+         <mat-form-field appearance="fill" class="advanced">
+            <mat-label>Left</mat-label>
+            <input type="number" min="0" max="1000" matInput [(ngModel)]="spacing.left" (input)="onInputSize()">
+            <h6 matSuffix>px</h6>
+         </mat-form-field>
+         <mat-form-field appearance="fill" class="advanced">
+            <mat-label>Right</mat-label>
+            <input type="number" min="0" max="1000" matInput [(ngModel)]="spacing.right" (input)="onInputSize()">
+            <h6 matSuffix>px</h6>
+         </mat-form-field>
+      </div>
+   </ng-template>
+</div>

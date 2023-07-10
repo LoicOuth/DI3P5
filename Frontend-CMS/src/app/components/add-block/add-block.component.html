@@ -1,0 +1,19 @@
+<h1 mat-dialog-title class="text-xl font-bold">Add a block</h1>
+<div mat-dialog-content class="flex flex-col my-5" [formGroup]="blockFormGroup">
+   <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Enter a name for the block</mat-label>
+      <input matInput formControlName="name" class="rounded-md">
+      <mat-error *ngIf="blockFormGroup.get('name')?.hasError('required')">
+         Name field is required
+      </mat-error>
+   </mat-form-field>
+
+   <mat-form-field class="w-full mt-5" appearance="fill">
+      <mat-label>Enter a description for the block</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+   </mat-form-field>
+</div>
+<div mat-dialog-actions class="flex justify-end">
+   <button mat-button (click)="dialogRef.close()">Cancel</button>
+   <button mat-flat-button color="primary" (click)="submitForm()" [disabled]="!blockFormGroup.valid">Create</button>
+</div>

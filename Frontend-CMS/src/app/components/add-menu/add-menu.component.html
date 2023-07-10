@@ -1,0 +1,21 @@
+<h1 mat-dialog-title class="text-xl font-bold">Add a menu</h1>
+<div mat-dialog-content class="flex flex-col my-5" [formGroup]="linkFormGroup">
+    <mat-form-field class="w-full" appearance="fill">
+        <mat-label>Enter a name for the link</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="linkFormGroup.get('name')?.hasError('required')">
+            Name field is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field color="primary">
+        <mat-label>Choose an option</mat-label>
+        <mat-select class="border-primary" formControlName="pageId">
+            <mat-option *ngFor=" let page of pages" [value]="page.id">{{page.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="flex justify-end">
+    <button mat-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-flat-button color="primary" (click)="submitForm()" [disabled]="!linkFormGroup.valid">Create</button>
+</div>

@@ -1,0 +1,16 @@
+<mat-card-content>
+   <div class="flex flex-col text-grayusite">
+      <h2 class="text-center">Add new content</h2>
+
+      <mat-divider class="!mt-3 !mb-5"></mat-divider>
+
+      <div class="grid w-full grid-cols-2 grid-rows-2 gap-4">
+         <ng-container *ngFor="let enum of TypeElement | enumToArray">
+            <div *ngIf="enum !== 'Menu'" class="px-5 py-3 mt-2 border rounded-md shadow-md cursor-grab hover:border-primary" draggable="true"
+               (dragstart)="onDragStart(enum)" (dragend)="onDragEnd()">
+               <app-content-item [enum]="enum"></app-content-item>
+            </div>
+         </ng-container>
+      </div>
+   </div>
+</mat-card-content>

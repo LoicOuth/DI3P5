@@ -1,0 +1,28 @@
+<mat-card-content>
+   <div class="flex flex-col text-grayusite" [formGroup]="pageFormGroup">
+      <h2 class="text-center">Update detail page</h2>
+      <mat-divider class="!mt-3 !mb-5"></mat-divider>
+
+      <mat-form-field class="w-full" appearance="fill">
+         <mat-label>Page name</mat-label>
+         <input matInput formControlName="name">
+         <mat-error *ngIf="pageFormGroup.get('name')?.hasError('required')">
+            Name field is required
+         </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full mt-5" appearance="fill">
+         <mat-label>Page description</mat-label>
+         <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+      <mat-checkbox formControlName="isFirst">First page</mat-checkbox>
+   </div>
+</mat-card-content>
+
+<mat-card-footer>
+   <div class="flex justify-center p-2">
+      <button mat-flat-button color="primary" class="w-full" [disabled]="!pageFormGroup.valid"
+         (click)="submitForm()">Update</button>
+   </div>
+</mat-card-footer>

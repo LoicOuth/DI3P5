@@ -1,0 +1,28 @@
+<mat-tab-group>
+   <mat-tab>
+      <ng-template mat-tab-label>
+         <mat-icon class="mr-2">edit_road</mat-icon>
+         Content
+      </ng-template>
+      <app-tab-content></app-tab-content>
+   </mat-tab>
+
+   <mat-tab>
+      <ng-template mat-tab-label>
+         <mat-icon class="mr-2">style</mat-icon>
+         Style
+      </ng-template>
+      <app-tab-style></app-tab-style>
+   </mat-tab>
+
+   <mat-tab>
+      <ng-template mat-tab-label>
+         <mat-icon class="mr-2">tune</mat-icon>
+         Advanced
+      </ng-template>
+      <app-tab-advanced></app-tab-advanced>
+   </mat-tab>
+</mat-tab-group>
+<div *ngIf="(selectElement | async)" class="w-full h-16 bg-white border-t shadow-md">
+   <app-content-item [enum]="getEnumString((selectElement | async)?.element!.type)" [isRow]="true"></app-content-item>
+</div>

@@ -1,0 +1,20 @@
+{
+  "name": "usite-documentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-reading-time": "^0.1.1"
+  },
+  "dependencies": {
+    "markdown-it-task-lists": "^2.1.1"
+  }
+}

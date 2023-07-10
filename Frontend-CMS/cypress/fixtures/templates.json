@@ -1,0 +1,66 @@
+{
+   "items": [
+      {
+         "id": "80510393-6f6e-4c6f-a8a5-64d26166eb9f",
+         "parentId": null,
+         "pageId": null,
+         "pageName": null,
+         "menuId": null,
+         "type": 0,
+         "name": "Template 1",
+         "description": "Temmplate 1 coucou alexandre",
+         "content": null,
+         "url": null,
+         "alt": null,
+         "elementsChilds": [
+            {
+               "id": "2d4598b0-b641-4650-bda6-7577134eccd1",
+               "parentId": "80510393-6f6e-4c6f-a8a5-64d26166eb9f",
+               "pageId": null,
+               "pageName": null,
+               "menuId": null,
+               "type": 2,
+               "name": null,
+               "description": null,
+               "content": "text",
+               "url": null,
+               "alt": null,
+               "elementsChilds": [],
+               "styles": [
+                  {
+                     "property": 3,
+                     "value": "text-[#fff]"
+                  }
+               ]
+            }
+         ],
+         "styles": [
+            {
+               "property": 8,
+               "value": "pb-[15px]"
+            },
+            {
+               "property": 14,
+               "value": "justify-center"
+            },
+            {
+               "property": 4,
+               "value": "bg-[#000]"
+            },
+            {
+               "property": 7,
+               "value": "w-[100%]"
+            },
+            {
+               "property": 13,
+               "value": "flex"
+            }
+         ]
+      }
+   ],
+   "pageNumber": 1,
+   "totalPages": 1,
+   "totalCount": 1,
+   "hasPreviousPage": false,
+   "hasNextPage": false
+}

@@ -1,0 +1,24 @@
+﻿@page
+@model ConfirmEmailChangeModel
+@{
+    ViewData["Title"] = Ressources.ConfirmMailChange_title;
+}
+
+<div class="flex flex-column align-center">
+    @if (Model.Message.StartsWith("Error"))
+    {
+        <h1 class="text-danger">Error</h1>
+        <p>
+            @Model.Message
+        </p>
+        <img class="mt-5" width="120px" src="~/images/circle-exclamation.svg" />
+    }
+    else
+    {
+        <h1 class="text-sucess">Success</h1>
+        <p>
+            @Model.Message
+        </p>
+        <img class="mt-5" width="120px" src="~/images/circle-check.svg" />
+    }
+</div>

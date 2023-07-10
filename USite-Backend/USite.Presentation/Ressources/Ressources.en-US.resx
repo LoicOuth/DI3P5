@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessDenied_message" xml:space="preserve">
+    <value>You do not have access to this resource.</value>
+  </data>
+  <data name="AccessDenied_title" xml:space="preserve">
+    <value>Access denied</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>USite</value>
+  </data>
+  <data name="ConfirmMailChange_title" xml:space="preserve">
+    <value>Confirm email change</value>
+  </data>
+  <data name="ConfirmMail_error" xml:space="preserve">
+    <value>Error occured during the confirmation of your email, try again later.</value>
+  </data>
+  <data name="ConfirmMail_success" xml:space="preserve">
+    <value>Your email is confirmed, you can use the application.</value>
+  </data>
+  <data name="ConfirmMail_title" xml:space="preserve">
+    <value>Confirm email</value>
+  </data>
+  <data name="Error_Message" xml:space="preserve">
+    <value>An error occurred while processing your request.</value>
+  </data>
+  <data name="Error_RequestId" xml:space="preserve">
+    <value>Request ID:</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ExternalLogin_Message1" xml:space="preserve">
+    <value>You've successfully authenticated with</value>
+  </data>
+  <data name="ExternalLogin_Message2" xml:space="preserve">
+    <value>Please enter some extra information for complete your account and click the register button to finish logging in.</value>
+  </data>
+  <data name="ForgotPasswordConfirmation_Message" xml:space="preserve">
+    <value>Please check your email to reset your password.</value>
+  </data>
+  <data name="ForgotPasswordConfirmation_Title" xml:space="preserve">
+    <value>Forgot password confirmation</value>
+  </data>
+  <data name="ForgotPassword_BtnResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="ForgotPassword_Title" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="ForgotPassword_Title2" xml:space="preserve">
+    <value>Enter your email.</value>
+  </data>
+  <data name="Index_Title" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Lockout_Message" xml:space="preserve">
+    <value>This account has been locked out, please try again later.</value>
+  </data>
+  <data name="Lockout_Title" xml:space="preserve">
+    <value>Locked out</value>
+  </data>
+  <data name="LoginWith2fa_Message1" xml:space="preserve">
+    <value>Your login is protected with an authenticator app. Enter your authenticator code below.</value>
+  </data>
+  <data name="LoginWith2fa_Message2" xml:space="preserve">
+    <value>Don't have access to your authenticator device? You can</value>
+  </data>
+  <data name="LoginWith2fa_Message3" xml:space="preserve">
+    <value>log in with a
+            recovery code</value>
+  </data>
+  <data name="LoginWith2fa_Title" xml:space="preserve">
+    <value>Two-factor authentication</value>
+  </data>
+  <data name="LoginWithRecoveryCode_Message" xml:space="preserve">
+    <value>You have requested to log in with a recovery code. This login will not be remembered until you provide an authenticator app code at log in or disable 2FA and log in again.</value>
+  </data>
+  <data name="LoginWithRecoveryCode_Title" xml:space="preserve">
+    <value>Recovery code verification</value>
+  </data>
+  <data name="Login_BtnExternalLogin" xml:space="preserve">
+    <value>Log in with</value>
+  </data>
+  <data name="Login_LinkForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Login_LinkRegister" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="Login_LinkResendMail" xml:space="preserve">
+    <value>Resend email confirmation</value>
+  </data>
+  <data name="Manage_ChangePassword_BtnUpdate" xml:space="preserve">
+    <value>Update password</value>
+  </data>
+  <data name="Manage_ChangePassword_Title" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="Manage_DeletePersonalData_BtnDelete" xml:space="preserve">
+    <value>Delete data and close my account</value>
+  </data>
+  <data name="Manage_DeletePersonalData_Message" xml:space="preserve">
+    <value>Deleting this data will permanently remove your account, and this cannot be recovered.</value>
+  </data>
+  <data name="Manage_DeletePersonalData_Title" xml:space="preserve">
+    <value>Delete Personal Data</value>
+  </data>
+  <data name="Manage_Disable2fa_Btn" xml:space="preserve">
+    <value>Disable 2FA</value>
+  </data>
+  <data name="Manage_Disable2fa_Message1" xml:space="preserve">
+    <value>This action only disables 2FA.</value>
+  </data>
+  <data name="Manage_Disable2fa_Message2" xml:space="preserve">
+    <value>Disabling 2FA does not change the keys used in authenticator apps. If you wish to change the key
+            used in an authenticator app you should</value>
+  </data>
+  <data name="Manage_Disable2fa_Message3" xml:space="preserve">
+    <value>reset your authenticator
+                keys.</value>
+  </data>
+  <data name="Manage_Disable2fa_Title" xml:space="preserve">
+    <value>Disable two-factor authentication (2FA)</value>
+  </data>
+  <data name="Manage_DownloadPersonalData_Title" xml:space="preserve">
+    <value>Download Your Data</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_BtnVerif" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_LinkAndroid" xml:space="preserve">
+    <value>Android</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_LinkIos" xml:space="preserve">
+    <value>IOS
+</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_Message1" xml:space="preserve">
+    <value>To use an authenticator app go through the following steps:</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_Message2" xml:space="preserve">
+    <value>Download a two-factor authenticator app like Microsoft Authenticator for</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_Message3" xml:space="preserve">
+    <value>Scan the QR Code or enter this key</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_Message4" xml:space="preserve">
+    <value>into your two factor authenticator app.
+                Spaces and casing do not matter.</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_Message5" xml:space="preserve">
+    <value>Once you have scanned the QR code or input the key above, your two factor authentication app will
+                provide you
+                with a unique code. Enter the code in the confirmation box below.</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_TextGoogle" xml:space="preserve">
+    <value>Google Authenticator for</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_Title" xml:space="preserve">
+    <value>Configure authenticator app</value>
+  </data>
+  <data name="Manage_EnableAuthenticator_VerifCode" xml:space="preserve">
+    <value>Verification Code</value>
+  </data>
+  <data name="Manage_ExternalLogins_BtnRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Manage_ExternalLogins_MessageLog1" xml:space="preserve">
+    <value>Log in using your</value>
+  </data>
+  <data name="Manage_ExternalLogins_MessageLog2" xml:space="preserve">
+    <value>account</value>
+  </data>
+  <data name="Manage_ExternalLogins_MessageRemove1" xml:space="preserve">
+    <value>Remove this</value>
+  </data>
+  <data name="Manage_ExternalLogins_MessageRemove2" xml:space="preserve">
+    <value>login from your account</value>
+  </data>
+  <data name="Manage_ExternalLogins_Title" xml:space="preserve">
+    <value>Manage your external logins</value>
+  </data>
+  <data name="Manage_GenerateRecoveryCodes_BtnRecovery" xml:space="preserve">
+    <value>Generate Recovery Codes</value>
+  </data>
+  <data name="Manage_GenerateRecoveryCodes_Message1" xml:space="preserve">
+    <value>Put these codes in a safe place.</value>
+  </data>
+  <data name="Manage_GenerateRecoveryCodes_Message2" xml:space="preserve">
+    <value>If you lose your device and don't have the recovery codes you will lose access to your account.</value>
+  </data>
+  <data name="Manage_GenerateRecoveryCodes_Message3" xml:space="preserve">
+    <value>Generating new recovery codes does not change the keys used in authenticator apps. If you wish to change the key
+            used in an authenticator app you should</value>
+  </data>
+  <data name="Manage_GenerateRecoveryCodes_MessageLink" xml:space="preserve">
+    <value>reset your authenticator keys.</value>
+  </data>
+  <data name="Manage_GenerateRecoveryCodes_Title" xml:space="preserve">
+    <value>Generate two-factor authentication (2FA) recovery codes</value>
+  </data>
+  <data name="Manage_Index_BtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Manage_Layout_Title1" xml:space="preserve">
+    <value>Manage your account</value>
+  </data>
+  <data name="Manage_Layout_Title2" xml:space="preserve">
+    <value>Change your account settings</value>
+  </data>
+  <data name="Manage_Mail_BtnChangeEmail" xml:space="preserve">
+    <value>Change email</value>
+  </data>
+  <data name="Manage_Mail_BtnVerification" xml:space="preserve">
+    <value>Send verification email</value>
+  </data>
+  <data name="Manage_Mail_Title" xml:space="preserve">
+    <value>Manage Email</value>
+  </data>
+  <data name="Manage_Nav_External" xml:space="preserve">
+    <value>External logins</value>
+  </data>
+  <data name="Manage_Nav_Personal" xml:space="preserve">
+    <value>Personal data</value>
+  </data>
+  <data name="Manage_Nav_TwoFactor" xml:space="preserve">
+    <value>Two-factor authentication</value>
+  </data>
+  <data name="Manage_PersonalData_BtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Manage_PersonalData_BtnDownload" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Manage_PersonalData_Message1" xml:space="preserve">
+    <value>Deleting this data will permanently remove your account, and this cannot be recovered.</value>
+  </data>
+  <data name="Manage_PersonalData_Message2" xml:space="preserve">
+    <value>Your account contains personal data that you have given us. This page allows you to download or delete that data.</value>
+  </data>
+  <data name="Manage_PersonalData_Title" xml:space="preserve">
+    <value>Personal Data</value>
+  </data>
+  <data name="Manage_ResetAuthenticator_BtnResetAuthenticator" xml:space="preserve">
+    <value>Reset authenticator key</value>
+  </data>
+  <data name="Manage_ResetAuthenticator_Message1" xml:space="preserve">
+    <value>If you reset your authenticator key your authenticator app will not work until you reconfigure
+        it.</value>
+  </data>
+  <data name="Manage_ResetAuthenticator_Message2" xml:space="preserve">
+    <value>This process disables 2FA until you verify your authenticator app.
+        If you do not complete your authenticator app configuration you may lose access to your account.</value>
+  </data>
+  <data name="Manage_ResetAuthenticator_Title" xml:space="preserve">
+    <value>Reset authenticator key</value>
+  </data>
+  <data name="Manage_SetPassword_Message" xml:space="preserve">
+    <value>You do not have a local username/password for this site. Add a local
+        account so you can log in without an external login.</value>
+  </data>
+  <data name="Manage_SetPassword_Title" xml:space="preserve">
+    <value>Set password</value>
+  </data>
+  <data name="Manage_SetPassword_Title2" xml:space="preserve">
+    <value>Set your password</value>
+  </data>
+  <data name="Manage_ShowRecoveryCodes_Message1" xml:space="preserve">
+    <value>Put these codes in a safe place.</value>
+  </data>
+  <data name="Manage_ShowRecoveryCodes_Message2" xml:space="preserve">
+    <value>If you lose your device and don't have the recovery codes you will lose access to your account.</value>
+  </data>
+  <data name="Manage_ShowRecoveryCodes_Title" xml:space="preserve">
+    <value>Recovery codes</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_BtnForgetBrowser" xml:space="preserve">
+    <value>Forget this browser</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_LinkAddAuthenticator" xml:space="preserve">
+    <value>Add authenticator app</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_LinkDisable2FA" xml:space="preserve">
+    <value>Disable 2FA</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_LinkResetAuthenticator" xml:space="preserve">
+    <value>Reset authenticator app</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_LinkResetRecoveryCode" xml:space="preserve">
+    <value>Reset recovery codes</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_LinkSetAuthenticator" xml:space="preserve">
+    <value>Set up authenticator app</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message1" xml:space="preserve">
+    <value>You have no recovery codes left.</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message10" xml:space="preserve">
+    <value>You must accept the policy before you can enable two factor authentication.</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message2" xml:space="preserve">
+    <value>You must</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message3" xml:space="preserve">
+    <value>before you can log in
+                            with a recovery code.</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message4" xml:space="preserve">
+    <value>You have 1 recovery code left.</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message5" xml:space="preserve">
+    <value>You can</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message6" xml:space="preserve">
+    <value>You have</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message7" xml:space="preserve">
+    <value>recovery codes left.</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message8" xml:space="preserve">
+    <value>You should</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Message9" xml:space="preserve">
+    <value>Privacy and cookie policy have not been accepted.</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_MessageRecoveryCodes" xml:space="preserve">
+    <value>generate a new set of recovery codes</value>
+  </data>
+  <data name="Manage_TwoFactorAuthentication_Title" xml:space="preserve">
+    <value>Two-factor authentication (2FA)</value>
+  </data>
+  <data name="RegisterConfirmation_Message" xml:space="preserve">
+    <value>Please check your email to confirm your account.</value>
+  </data>
+  <data name="RegisterConfirmation_Message2" xml:space="preserve">
+    <value>Your email is confirmed. Go to your</value>
+  </data>
+  <data name="RegisterConfirmation_Title" xml:space="preserve">
+    <value>Register confirmation</value>
+  </data>
+  <data name="ResendMailConfirmation_Message" xml:space="preserve">
+    <value>Verification email sent. Please check your email.</value>
+  </data>
+  <data name="ResendMailConfirmation_Resend" xml:space="preserve">
+    <value>Resend</value>
+  </data>
+  <data name="ResendMailConfirmation_Title" xml:space="preserve">
+    <value>Resend email confirmation</value>
+  </data>
+  <data name="ResendMailConfirmation_Title2" xml:space="preserve">
+    <value>Enter your email.</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Message1" xml:space="preserve">
+    <value>Your password has been reset. Please</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Message2" xml:space="preserve">
+    <value>click here to log in</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Title" xml:space="preserve">
+    <value>Reset password confirmation</value>
+  </data>
+  <data name="ResetPassword_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetPassword_Title" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="ResetPassword_Title2" xml:space="preserve">
+    <value>Reset your password.</value>
+  </data>
+  <data name="TextBtnLoginGoogle" xml:space="preserve">
+    <value>Login wih google</value>
+  </data>
+  <data name="Text_And" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="Text_CheckboxConditionUtilisation1" xml:space="preserve">
+    <value>By checking this box, you consent to your personal data being taken in accordance with</value>
+  </data>
+  <data name="Text_CheckboxConditionUtilisation2" xml:space="preserve">
+    <value>our personal data processing conditions</value>
+  </data>
+  <data name="Text_ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="Text_FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="Text_LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Text_Link_Login" xml:space="preserve">
+    <value>or login</value>
+  </data>
+  <data name="Text_Link_Register" xml:space="preserve">
+    <value>or register</value>
+  </data>
+  <data name="Text_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Text_Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Text_Mail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Text_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Text_Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="Text_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Text_Profil" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Text_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Text_Remember" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+</root>

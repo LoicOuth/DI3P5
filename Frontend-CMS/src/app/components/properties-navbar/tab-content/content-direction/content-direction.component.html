@@ -1,0 +1,24 @@
+<div class="flex flex-col items-start mt-5">
+   <h6>Select direction</h6>
+
+   <mat-button-toggle-group class="mt-3" (change)="onDirectionChange($event.value)" [value]="direction">
+    <mat-button-toggle value="justify-center" matTooltip="Justify Center">
+      <mat-icon>align_horizontal_center</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify-start" matTooltip="Justify Start">
+      <mat-icon>align_horizontal_left</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify-end" matTooltip="Justify End">
+      <mat-icon>align_horizontal_right</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify-evenly" matTooltip="Justify Evenly">
+      <mat-icon class="rotate">format_align_justify</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify-around" matTooltip="Justify Around">
+      <mat-icon class="rotate">density_small</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify-between" matTooltip="Justify Between">
+      <mat-icon class="rotate">density_medium</mat-icon>
+    </mat-button-toggle>
+   </mat-button-toggle-group>
+</div>

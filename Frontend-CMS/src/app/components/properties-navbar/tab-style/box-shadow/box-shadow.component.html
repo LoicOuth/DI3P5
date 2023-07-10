@@ -1,0 +1,19 @@
+<h6>Shadow</h6>
+
+<mat-button-toggle-group (change)="onShadowChange($event.value)" [value]="shadow" class="mt-2 ">
+    <mat-button-toggle value="shadow-none">
+        <h1>None</h1>
+    </mat-button-toggle>
+    <mat-button-toggle value="shadow-sm">
+        <h1>S</h1>
+    </mat-button-toggle>
+    <mat-button-toggle value="shadow-md">
+        <h1>M</h1>
+    </mat-button-toggle>
+    <mat-button-toggle value="shadow-lg">
+        <h1>L</h1>
+    </mat-button-toggle>
+    <mat-button-toggle value="shadow-xl">
+        <h1>XL</h1>
+    </mat-button-toggle>
+</mat-button-toggle-group>

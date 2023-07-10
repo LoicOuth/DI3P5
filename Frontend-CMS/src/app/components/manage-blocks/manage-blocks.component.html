@@ -1,0 +1,30 @@
+<mat-card-content>
+   <div class="flex flex-col text-grayusite">
+      <h2>Rearrange the site or add blocks</h2>
+
+      <mat-divider class="!mt-3 !mb-5"></mat-divider>
+
+      <div class="flex flex-col" cdkDropList>
+         <div *ngFor="let element of elements"
+            class="flex items-center p-2 my-1 bg-white border rounded-md cursor-move border-secondary text-grayusite group"
+            cdkDrag (cdkDragDropped)="onBlockDropped($event)">
+            <div class="border-2 border-dashed placeholder bg-primary/10 border-primary" *cdkDragPlaceholder></div>
+            <mat-icon fontIcon="drag_indicator" class="icon-size-xs group-hover:text-primary"></mat-icon>
+            <div class="flex flex-col ml-2">
+               <h4 class="font-bold">{{element.name}}</h4>
+               <h6>{{element.description}}</h6>
+            </div>
+         </div>
+      </div>
+   </div>
+</mat-card-content>
+
+<mat-card-footer>
+   <div class="flex items-center justify-center w-full px-5 cursor-pointer group" (click)="openAddBlock()">
+      <div class="flex-1"><mat-divider></mat-divider></div>
+      <div class="px-3">
+         <mat-icon fontIcon="add_circle_outline" class="rounded-full text-primary group-hover:bg-primary/10"></mat-icon>
+      </div>
+      <div class="flex-1"><mat-divider></mat-divider></div>
+   </div>
+</mat-card-footer>

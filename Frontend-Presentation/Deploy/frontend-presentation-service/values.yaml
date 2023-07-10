@@ -1,0 +1,31 @@
+replicaCount: 1
+
+image:
+  repository: louthier/frontend-presentation-service
+  pullPolicy: Always
+  tag: "latest"
+
+imagePullSecrets:
+  - name: regcred
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  className: nginx
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+  hosts:
+    - host: usite.fr
+      paths: 
+      - path: "/"
+        pathType: Prefix
+
+
+autoscaling:
+  enabled: false
+
+serviceAccount:
+  create: false

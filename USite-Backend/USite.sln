@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USite.Domain", "USite.Domain\USite.Domain.csproj", "{EB8806BA-FE76-4C0B-8D58-51399182A38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A75D337F-26FC-4140-B974-0F1FA99818E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USite.Application", "USite.Application\USite.Application.csproj", "{3C5E0EBB-5133-4117-AFD2-9B595413A81E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USite.Infrastructure", "USite.Infrastructure\USite.Infrastructure.csproj", "{F77282C3-CE93-4594-BDF6-3F8748E2D5F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USite.Presentation", "USite.Presentation\USite.Presentation.csproj", "{A4F2E653-1E0B-42B9-91FF-AC88A94FDFD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8AFCEA63-5771-48A0-ADF0-96B939B97FB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "Application.IntegrationTests\IntegrationTests.csproj", "{5E2EA143-CAC9-440F-9AB7-9E5353063E5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6EE8633A-3ADD-4C69-8CD6-CC8DABE8EAC8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB8806BA-FE76-4C0B-8D58-51399182A38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8806BA-FE76-4C0B-8D58-51399182A38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8806BA-FE76-4C0B-8D58-51399182A38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8806BA-FE76-4C0B-8D58-51399182A38E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C5E0EBB-5133-4117-AFD2-9B595413A81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5E0EBB-5133-4117-AFD2-9B595413A81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5E0EBB-5133-4117-AFD2-9B595413A81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5E0EBB-5133-4117-AFD2-9B595413A81E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77282C3-CE93-4594-BDF6-3F8748E2D5F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77282C3-CE93-4594-BDF6-3F8748E2D5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77282C3-CE93-4594-BDF6-3F8748E2D5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77282C3-CE93-4594-BDF6-3F8748E2D5F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F2E653-1E0B-42B9-91FF-AC88A94FDFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F2E653-1E0B-42B9-91FF-AC88A94FDFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F2E653-1E0B-42B9-91FF-AC88A94FDFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F2E653-1E0B-42B9-91FF-AC88A94FDFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2EA143-CAC9-440F-9AB7-9E5353063E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2EA143-CAC9-440F-9AB7-9E5353063E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2EA143-CAC9-440F-9AB7-9E5353063E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2EA143-CAC9-440F-9AB7-9E5353063E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB8806BA-FE76-4C0B-8D58-51399182A38E} = {A75D337F-26FC-4140-B974-0F1FA99818E8}
+		{3C5E0EBB-5133-4117-AFD2-9B595413A81E} = {A75D337F-26FC-4140-B974-0F1FA99818E8}
+		{F77282C3-CE93-4594-BDF6-3F8748E2D5F5} = {A75D337F-26FC-4140-B974-0F1FA99818E8}
+		{A4F2E653-1E0B-42B9-91FF-AC88A94FDFD8} = {A75D337F-26FC-4140-B974-0F1FA99818E8}
+		{5E2EA143-CAC9-440F-9AB7-9E5353063E5F} = {8AFCEA63-5771-48A0-ADF0-96B939B97FB4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36924F1F-DBFF-42A7-B68D-A57F103C3BD1}
+	EndGlobalSection
+EndGlobal

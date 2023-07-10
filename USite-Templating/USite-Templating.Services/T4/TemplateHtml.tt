@@ -1,0 +1,76 @@
+﻿﻿<#@ template language="C#" #>
+<#@ output extension=".html" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ parameter name="Page" type="USite_Templating.Services.Dtos.PageDto" #>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.min.css" />
+   <meta name="description" content="<#= Page.Description #>">
+   <title><#= Page.Name #></title>
+</head>
+
+<body>
+    <nav>
+        <#
+            var menu = Page.Elements.FirstOrDefault(x => x.MenuId != null);
+            if(menu != null)
+            {
+                #>
+                <#= GenerateElementCode(menu) #>
+                <#
+            }
+        #>
+    </nav>
+      <# foreach (var element in Page.Elements.Where(x => x.MenuId == null)) { #>
+            <#= GenerateElementCode(element) #>
+      <# } #>
+</body>     
+
+</html>
+
+<#+
+private string GenerateElementCode(USite_Templating.Services.Dtos.ElementDto element)
+{
+    var htmlCode = string.Empty;
+
+    switch (element.Type)
+    {
+        case USite_Templating.Services.Dtos.TypeElement.Block:
+            htmlCode += "<div class=\"" + string.Join(" ", element.Styles.Select(s => s.Value)) + "\">";
+            break;
+        case USite_Templating.Services.Dtos.TypeElement.H1:
+            htmlCode += "<h1 class=\"" + string.Join(" ", element.Styles.Select(s => s.Value)) + "\">" + element.Content.Replace("\n", "<br />") + "</h1>";
+            break;
+        case USite_Templating.Services.Dtos.TypeElement.Button:
+            htmlCode += "<button class=\"" + string.Join(" ", element.Styles.Select(s => s.Value)) + "\">" + element.Content.Replace("\n", "<br />") + "</button>";
+            break;
+        case USite_Templating.Services.Dtos.TypeElement.Link:
+            htmlCode += "<a href=\"" + element.PageName + ".html\" class=\"" + string.Join(" ", element.Styles.Select(s => s.Value)) + "\">" + element.Content.Replace("\n", "<br />") + "</a>";
+            break;
+        case USite_Templating.Services.Dtos.TypeElement.Image:
+            htmlCode += "<img src=\"" + element.Url + "\" alt=\"" + element.Alt + "\" class=\"" + string.Join(" ", element.Styles.Select(s => s.Value)) + "\"/>";
+            break;
+    }
+
+    if (element.ElementsChilds != null)
+    {
+        foreach (var childElement in element.ElementsChilds)
+        {
+            htmlCode += GenerateElementCode(childElement);
+        }
+    }
+
+    if (element.Type == USite_Templating.Services.Dtos.TypeElement.Block)
+    {
+        htmlCode += "</div>";
+    }
+
+    return htmlCode;
+}
+#>

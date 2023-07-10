@@ -1,0 +1,41 @@
+﻿@page
+@model LoginWith2faModel
+@{
+    ViewData["Title"] = Ressources.LoginWith2fa_Title;
+}
+
+<div class="flex flex-column align-center">
+    <h1>@ViewData["Title"]</h1>
+    <p>@Ressources.LoginWith2fa_Message1</p>
+
+    <form class="w-1_6" method="post" asp-route-returnUrl="@Model.ReturnUrl">
+        <input asp-for="RememberMe" type="hidden" />
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+        <div class="form mb-3">
+            <input asp-for="Input.TwoFactorCode" autocomplete="off" placeholder=" " />
+            <label asp-for="Input.TwoFactorCode"></label>
+            <span asp-validation-for="Input.TwoFactorCode"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.RememberMachine">
+                <input asp-for="Input.RememberMachine" />
+                @Html.DisplayNameFor(m => m.Input.RememberMachine)
+            </label>
+        </div>
+        <div>
+            <button type="submit" class="w-full btn-primary">@Ressources.Text_Login</button>
+        </div>
+    </form>
+
+    <p>
+        @Ressources.LoginWith2fa_Message2
+        <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">
+            @Ressources.LoginWith2fa_Message3
+        </a>.
+    </p>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

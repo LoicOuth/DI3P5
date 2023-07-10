@@ -1,0 +1,69 @@
+﻿@page
+@using USite.Presentation.Ressources;
+@model LoginModel
+@{
+    ViewData["Title"] = Ressources.Text_Login;
+}
+<div class="flex flex-column align-center">
+    <h1 class="mb-0 title-color">
+        @Ressources.Text_Login
+    </h1>
+    <a asp-area="Identity" asp-page="/Account/Register">@Ressources.Text_Link_Register</a>
+</div>
+<div class="flex justify-evenly align-center w-full mt-5 sm-flex-col">
+    <div class="w-1_6 sm-w-2_3 flex flex-column justify-center">
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert" />
+        <div class="text-danger">
+            @Html.ValidationMessage("LoginError")
+        </div>
+        <form id="account" method="post" class="flex-1 mt-5">
+            <div class="form">
+                <input asp-for="Input.Email" class="w-full" autocomplete="username" aria-required="true" placeholder=" " class="block" />
+                <label asp-for="Input.Email" class="title-color">@Ressources.Text_Mail</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form mt-5">
+                <input asp-for="Input.Password" autocomplete="current-password" aria-required="true" placeholder=" "/>
+                <label asp-for="Input.Password" class="title-color">@Ressources.Text_Password</label>
+                <span asp-validation-for="Input.Password"></span>
+            </div>
+            <div class="mt-5">
+                <label asp-for="Input.RememberMe" class="title-color text-xl cursor-pointer">
+                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                    @Ressources.Text_Remember
+                </label>
+            </div>
+            <div class="mt-5 mb-3">
+                <button id="login-submit" type="submit" class="btn-primary w-full">@Ressources.Text_Login</button>
+            </div>
+
+            <div class="flex justify-between">
+                <a id="forgot-password" asp-page="./ForgotPassword" class="text-none">@Ressources.Login_LinkForgotPassword</a>
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="text-none">@Ressources.Login_LinkRegister</a>
+                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="text-none">@Ressources.Login_LinkResendMail</a>
+            </div>
+        </form>
+    </div>
+    <div class="border sm-divider border-black divider">
+        <h1>@Ressources.Text_Or</h1>
+    </div>
+    <div class="w-1_6 sm-w-2_3">
+        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            @foreach (var provider in Model.ExternalLogins!)
+            {
+                var imageSource = $"/images/{@provider.Name.ToLower()}.png";
+                var btnClass = $"btn-{provider.Name.ToLower()}";
+                <button type="submit" class="@btnClass flex justify-center mb-3" name="provider" value="@provider.Name"
+                    title="Log in using your @provider.DisplayName account">
+                    <img src="@imageSource" class="w-1 mr-1" />
+                    @Ressources.Login_BtnExternalLogin @provider.Name.ToLower()
+                </button>
+
+            }
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
